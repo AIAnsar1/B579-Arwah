@@ -1,0 +1,133 @@
+[workspace]
+resolver = "2"
+members = [
+    "b579-arwah",
+    "b579-arwah-cli",
+    "b579-arwah-crypto",
+    "b579-arwah-engine",
+    "b579-arwah-net",
+    "b579-arwah-output",
+    "b579-arwah-plugin",
+    "b579-arwah-probe",
+    "b579-arwah-proto",
+    "b579-arwah-range",
+    "b579-arwah-scan",
+    "b579-arwah-support",
+]
+
+exclude = [
+    "librawsock",
+    "libpacket",
+    "libcrypto",
+    "libplatform",
+    "scripts",
+    "data",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["B-579"]
+license = "MIT"
+rust-version = "1.85"
+
+
+[workspace.dependencies]
+tokio = { version = "1.49", features = ["full"] }
+async-trait = "0.1"
+futures = "0.3"
+pcap = "2"
+pnet = "0.35"
+socket2 = "0.6"
+rustls = "0.23"
+rustls-pemfile = "2"
+webpki-roots = "1"
+tokio-rustls = "0.26"
+hickory-resolver = "0.25"
+russh = "0.50"
+httparse = "1"
+regex = "1"
+flate2 = "1"
+mlua = { version = "0.11", features = [
+    "lua54",
+    "vendored",
+    "async",
+    "send",
+] }
+
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+quick-xml = "0.39"
+toml = "1"
+csv = "1"
+clap = { version = "4", features = [
+    "derive",
+    "color",
+    "env",
+    "unicode",
+    "suggestions",
+] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = [
+    "env-filter",
+    "fmt",
+    "json",
+    "time",
+] }
+anyhow = "1"
+thiserror = "2"
+rand = "0.9"
+crossbeam = "0.8"
+crossbeam-channel = "0.5"
+dashmap = "6"
+parking_lot = "0.12"
+rayon = "1"
+bytes = "1"
+bitflags = "2"
+num_cpus = "1"
+chrono = { version = "0.4", features = ["serde"] }
+byteorder = "1"
+smallvec = "1"
+libc = "0.2"
+cc = "1"
+pkg-config = "0.3"
+
+b579-arwah        = { path = "b579-arwah" }
+b579-arwah-engine = { path = "b579-arwah-engine" }
+b579-arwah-net    = { path = "b579-arwah-net" }
+b579-arwah-scan   = { path = "b579-arwah-scan" }
+b579-arwah-proto  = { path = "b579-arwah-proto" }
+b579-arwah-probe  = { path = "b579-arwah-probe" }
+b579-arwah-crypto = { path = "b579-arwah-crypto" }
+b579-arwah-range  = { path = "b579-arwah-range" }
+b579-arwah-output = { path = "b579-arwah-output" }
+b579-arwah-plugin = { path = "b579-arwah-plugin" }
+b579-arwah-support  = { path = "b579-arwah-support" }
+
+
+# [workspace.dev-dependencies]
+
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = true
+panic = "abort"
+overflow-checks = false
+
+[profile.dev]
+opt-level = 0
+debug = true
+incremental = true
+
+[profile.bench]
+opt-level = 3
+lto = "thin"
+debug = true
+
+
+[profile.test]
+opt-level = 1
+debug = true
+

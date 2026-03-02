@@ -1,0 +1,21 @@
+[package]
+name = "b579-arwah-support"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "b579_arwah_support"
+
+[dependencies]
+libc.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+thiserror.workspace = true
+chrono.workspace = true
+num_cpus.workspace = true
+
+[build-dependencies]
+cc.workspace = true

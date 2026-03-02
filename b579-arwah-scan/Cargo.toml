@@ -1,0 +1,27 @@
+[package]
+name = "b579-arwah-scan"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "b579_arwah_scan"
+
+
+[dependencies]
+b579-arwah-net.workspace = true
+b579-arwah-proto.workspace = true
+b579-arwah-crypto.workspace = true
+b579-arwah-range.workspace = true
+b579-arwah-support.workspace = true
+tokio.workspace = true
+async-trait.workspace = true
+crossbeam.workspace = true
+parking_lot.workspace = true
+tracing.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+rand.workspace = true
+bytes.workspace = true

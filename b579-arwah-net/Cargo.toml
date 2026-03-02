@@ -1,0 +1,33 @@
+[package]
+name = "b579-arwah-net"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+
+[lib]
+name = "b579_arwah_net"
+
+[dependencies]
+b579-arwah-proto.workspace = true
+b579-arwah-support.workspace = true
+pcap.workspace = true
+pnet.workspace = true
+socket2.workspace = true
+libc.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+
+[build-dependencies]
+cc.workspace = true
+pkg-config.workspace = true
+
+[features]
+default = ["pcap-backend"]
+pcap-backend = []
+afpacket = []
+pfring = []

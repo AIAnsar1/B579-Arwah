@@ -1,0 +1,32 @@
+[package]
+name = "b579-arwah-engine"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "b579_arwah_engine"
+
+[dependencies]
+b579-arwah-scan.workspace = true
+b579-arwah-probe.workspace = true
+b579-arwah-net.workspace = true
+b579-arwah-range.workspace = true
+b579-arwah-crypto.workspace = true
+b579-arwah-output.workspace = true
+b579-arwah-plugin.workspace = true
+b579-arwah-support.workspace = true
+tokio.workspace = true
+async-trait.workspace = true
+futures.workspace = true
+crossbeam.workspace = true
+crossbeam-channel.workspace = true
+dashmap.workspace = true
+parking_lot.workspace = true
+tracing.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+num_cpus.workspace = true
+chrono.workspace = true

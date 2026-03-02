@@ -1,0 +1,23 @@
+[package]
+name = "b579-arwah"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+
+[lib]
+name = "b579_arwah"
+
+[dependencies]
+b579-arwah-engine.workspace = true
+b579-arwah-net.workspace = true
+b579-arwah-scan.workspace = true
+b579-arwah-proto.workspace = true
+b579-arwah-probe.workspace = true
+b579-arwah-crypto.workspace = true
+b579-arwah-range.workspace = true
+b579-arwah-output.workspace = true
+b579-arwah-plugin.workspace = true
+b579-arwah-support.workspace = true

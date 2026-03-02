@@ -1,0 +1,19 @@
+[package]
+name = "b579-arwah-crypto"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "b579_arwah_crypto"
+
+[dependencies]
+b579-arwah-support.workspace = true
+libc.workspace = true
+rand.workspace = true
+thiserror.workspace = true
+
+[build-dependencies]
+cc.workspace = true

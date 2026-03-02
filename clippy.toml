@@ -1,0 +1,4 @@
+max-fn-params-bools = 3
+cognitive-complexity-threshold = 30
+too-many-arguments-threshold = 8
+type-complexity-threshold = 300
