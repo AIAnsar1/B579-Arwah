@@ -17,15 +17,10 @@
  * Pattern: Single Source of Truth (DRY)
  *          All libraries use these types instead of
  *          defining their own.
- */
-
-/* ══════════════════════════════════════════
+ * ══════════════════════════════════════════
  *  Boolean — portable across C standards
  * ══════════════════════════════════════════ 
  */
-/* ══════════════════════════════════════════
- *  Boolean — portable across C standards
- * ══════════════════════════════════════════ */
 
 #if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 202311L
     /* C23: bool is built-in keyword */
@@ -51,7 +46,8 @@
  *
  *  Pattern: Defensive Programming
  *           Never silently ignore errors.
- * ══════════════════════════════════════════ */
+ * ══════════════════════════════════════════ 
+ */
 
 typedef int b579_result_t;
 
